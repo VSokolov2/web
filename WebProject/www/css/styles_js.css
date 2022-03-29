@@ -1,0 +1,211 @@
+body {
+	font-family: Arial; 
+	margin: 0px; 
+	padding: 0px; 
+	height: 100%;
+	color: #3d4246;
+}
+
+wrapper {
+	min-height: 100%;
+	padding-bottom : 50px
+}
+
+header {
+	height: 70px;
+	background-color: #f1f1f1;
+    padding: 0px 55px;
+	border-bottom: 1px solid #e8e9eb;
+	vertical-align: middle;
+}
+
+container {
+	height: inherit;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.my-menu {
+	list-style-type: none;
+	padding-left: 0px;
+	margin-bottom: 0;
+}
+
+.my-menu li {
+	display: inline-block;
+	padding: 10px;
+}
+
+.menu-logo {
+	width: 35px;
+	height:35px;
+	padding: 10px 130px 10px 10px;
+	border-radius: 10px;
+	transition: all 0.4s ease;
+}
+
+.menu-logo:hover {
+	box-shadow: inset 0 0 0 30px #b9d3ed;
+}
+
+.navigation {
+	padding:0;
+	margin:0;
+    list-style: none;
+    position: relative;
+}
+
+.navigation li {
+    display:inline-block;
+}
+
+/*Скрываем выпадающий список*/
+.navigation ul {
+	margin-top: 10px;
+	padding: 0px 0px 0px 10px;
+	max-height: 0px;
+	background-color: #b9d3ed;
+	border-radius: 10px;
+	position: absolute;
+	overflow: hidden;
+	list-style-type: none;
+	top: 100%;
+	transition:max-height 0.4s linear;
+}
+
+/* Отображаем при наведении */
+.navigation li:hover > ul{
+	max-height: 400px;
+}
+
+.navigation ul li {
+	border-bottom: 1px solid #e8e9eb;
+	margin-top: 10px;
+	min-width: 130px;
+}
+a{
+	text-decoration:none; /*Убираем стандартное подчёркивание ссылки если оно ещё не убрано*/
+	display: inline-block; /*делаем чтобы наша ссылка из строчного элемента превратилась в строчно-блочный */
+	color:#3d4246;/*Задаём цвет ссылки*/
+}
+a:after {
+	display: block; /*превращаем его в блочный элемент*/
+	content: ""; /*контента в данном блоке не будет поэтому в кавычках ничего не ставим*/
+	height: 3px; /*задаём высоту линии*/
+	width: 0%; /*задаём начальную ширину элемента (линии)*/
+	background-color: #225384; /*цвет фона элемента*/
+	transition: width 0.4s ease-in-out; /*данное свойство отвечает за плавное изменение ширины. Здесь можно задать время анимации в секундах (в данном случае 		задано 0.4 секунды)*/
+}
+a:hover:after,
+a:focus:after {
+	width: 100%;
+}
+a:hover{
+	color:#225384;
+} 
+
+.current {
+	color:#225384;
+}
+
+.current:after {
+	width: 100%;
+}
+
+
+.Logo {
+	width: 125px;
+	height: 50px;
+}
+
+section {
+	margin-bottom: 50px;
+	padding-top: 70px;
+	text-align: center;
+	text-align: justify;
+	text-indent: 25px;
+	line-height: 20px; 
+	margin-left: 10%; 
+	margin-right: 10%;
+}
+
+h1 { font-size: 2em; }
+
+.scroll-table {
+	border-bottom: 1px solid dimgray;
+	margin-bottom: 30px;
+}
+
+.scroll-table-body {
+	height: 90px;
+	overflow-x: auto;
+}
+
+table {
+	width: 100%;
+	border: 1px solid dimgray;
+	border-collapse: collapse; 
+}
+table th {
+	font-weight: bold;
+	padding: 10px 5px;
+	background: #efefef;
+	border-bottom: 1px solid dimgray;
+	width: 14%;
+}
+table td {
+	border: 1px solid dimgray;
+	padding: 5px;
+	
+}
+
+/* Стили для скролла */
+::-webkit-scrollbar {
+	width: 6px;
+} 
+::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+} 
+::-webkit-scrollbar-thumb {
+	box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+}
+
+footer {
+	height: 70px;
+	background-color: #f1f1f1;
+    padding: 2px 55px;
+	border-top: 1px solid #e8e9eb;
+	text-align:left;
+	display: flex;
+    align-items: flex-end;
+}
+
+.image-table {
+	height: 20%;
+	width: 20%;
+}
+
+.image-class {
+	margin: 10px auto 20px;
+	display: block;
+	height: 50%;
+	width: 50%;
+}
+
+textarea {
+	background-color: #d9d9d9;
+	border: none;
+}
+
+button {
+	background-color: #b9d3ed;
+	border:none;
+	border-radius: 10px;
+	width: 100px;
+	height: 30px;
+}
+
+button:hover {
+	background-color: #225384;
+}

@@ -1,0 +1,60 @@
+<!-- Служебный заголовок !-->
+<!DOCTYPE html>
+<html>
+<head>
+<title>WEB_3</title>
+<!--Место с кодировкой документа!-->
+<meta http-equiv="Content-type" content="text/html; charser = utf8">
+<link rel="stylesheet" href="css/styles_js.css" type="text/css">
+</head>
+
+<body>
+
+	<wrapper>
+
+		<header>
+			<container> 					
+					<img class="Logo" src="images/Logo.png"/>
+					
+					<ul class="my-menu">
+						<li><a class="current">Основы JS</a></li>
+						<li><a href='#'>ЛР 4</a></li>
+					</ul>
+					<ul class="navigation">
+						<li><img class="menu-logo" src="images/menu.png">
+							<ul>
+								<li><a href="index.html">Основная часть</a></li>
+								<li><a href="#">Анкета</a></li>
+								<li><a href="#">Таблицы из БД</a></li>
+								<li><a href="#">Таблицы из XML</a></li>
+							</ul>
+						</li>
+					</ul>
+			</container>
+		</header>
+		<section>
+			<h1 align= "center" style="padding:20px">Основы JavaScript</h1>
+			<div align="center">
+				Введите скрипт:<br/>
+				<textarea id="mycode" rows=40 cols=100></textarea>
+				<p><br/>Результат:<br/>
+				<textarea id="myrezult" rows=15 cols=100></textarea> <br/>
+				</p>
+				<button onclick= "document.getElementById('myrezult').value =
+				eval(document.getElementById('mycode').value)">
+				Выполнить
+				</button>
+				<button onclick=
+				"document.getElementById('mycode').value='';
+				document.getElementById('myrezult').value=''"> Очистить
+				</button>
+				</div>
+		</section>
+	</wrapper>
+
+	<footer>
+		&copy Владимир Соколов 
+		4933
+	</footer>
+</body>
+</html>
